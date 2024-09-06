@@ -3,7 +3,7 @@ import './Chat.css'; // Import the styles
 import io from 'socket.io-client';
 
 // Connect to backend using Socket.io (replace the URL with your backend's address)
-const socket = io('https://aumirah.onrender.com'); 
+const socket = io(process.env.REACT_APP_BACKEND_URL || 'http://localhost:4001');
 
 function Chat() {
     const [messages, setMessages] = useState([]); // Empty message list
