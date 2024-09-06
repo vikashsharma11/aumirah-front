@@ -1,0 +1,143 @@
+/* Chatbox container */
+.chat-container {
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .chat-container {
+        width: 95%;
+        right: 2.5%;
+        bottom: 10px;
+    }
+}
+
+/* Chat Header */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(to right, #22124B, #EA9E4F);
+    color: white;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.chat-header-info {
+    display: flex;
+    align-items: center;
+}
+
+.chat-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.chat-header-info h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.chat-header-info p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+/* Chat box - Messages area */
+.chat-box {
+    flex-grow: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat message styling */
+.chat-message {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 20px;
+    max-width: 75%;
+    font-size: 0.9rem;
+    word-wrap: break-word;
+    word-break: break-word;
+    display: inline-block;
+}
+
+/* User message on the right */
+.user-message {
+    background-color: #EA9E4F;
+    color: white;
+    text-align: right;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* Bot message on the left */
+.bot-message {
+    background-color: #f1f1f1;
+    color: black;
+    text-align: left;
+    align-self: flex-start;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+@media (max-width: 768px) {
+    .chat-message {
+        max-width: 85%;
+        font-size: 0.8rem;
+    }
+}
+
+/* Input box styling */
+.input-box {
+    display: flex;
+    padding: 0.75rem;
+    background-color: white;
+    border-top: 1px solid #ddd;
+}
+
+.input-box input {
+    flex-grow: 1;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.input-box button {
+    background-color: #EA9E4F;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 0.75rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-box button:hover {
+    background-color: #EA9E4F;
+}
+
+.send-icon {
+    font-size: 1rem;
+}
