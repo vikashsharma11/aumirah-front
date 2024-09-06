@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Chatbot Web Application
 
 Welcome to the Chatbot Web Application! This project contains a simple web application with a chatbot interface where users can engage in conversations with a chatbot. The application is built using React for the frontend and Node.js with Socket.io for real-time communication in the backend.
@@ -103,3 +104,6 @@ Missing Dependencies:
 ## Cross-Origin Errors (CORS):
 
 If you encounter a CORS error when connecting the frontend and backend, ensure that the backend allows requests from http://localhost:3000 (or your frontend URL). You can update the CORS settings in index.js (backend).
+=======
+
+>>>>>>> bac4b495e906e7a09d6db018358c1290cf665803
