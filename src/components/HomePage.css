@@ -48,9 +48,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-
-
-
 /* Hero section layout */
 .hero-section {
     display: flex;
@@ -58,13 +55,6 @@
     justify-content: space-between;
     padding: 4rem 0;
     background-color: white;
-}
-
-@media (max-width: 768px) {
-    .hero-section {
-        flex-direction: column;
-        text-align: center;
-    }
 }
 
 /* Hero image styles */
@@ -97,13 +87,6 @@
     color: #555;
 }
 
-.hero-text p0 {
-    font-size: 1.1rem;
-    margin-bottom: .5rem;
-    color: #000a0bd7;
-}
-
-
 /* Footer styling */
 .footer {
     background-color: #333;
@@ -115,8 +98,7 @@
 
 .footer .container {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: none; /* Allow footer container to expand full width */
 }
 
 /* Chatbox will be fixed in the bottom-right corner */
@@ -133,5 +115,59 @@
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-    z-index: 1000;
+}
+
+/* Responsive adjustments for Hero section */
+@media (max-width: 1024px) {
+    .hero-text h2 {
+        font-size: 1.75rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .hero-image-container, .hero-text {
+        flex: none;
+        width: 100%;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-container {
+        width: 90%;
+        height: 400px; /* Adjust size for smaller screens */
+        bottom: 10px;
+        right: 5%;
+    }
+
+    .hero-text h2 {
+        font-size: 1.25rem;
+    }
+
+    .hero-text p {
+        font-size: 0.85rem;
+    }
 }
