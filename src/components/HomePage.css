@@ -51,40 +51,30 @@
 /* Hero section layout */
 .hero-section {
     display: flex;
+    flex-wrap: wrap;  /* Allows elements to wrap as needed */
     align-items: center;
     justify-content: space-between;
     padding: 4rem 0;
     background-color: white;
 }
 
-/* Hero image styles */
-.hero-image-container {
-    flex: 1;
+/* Hero image and text containers need to flex correctly */
+.hero-image-container, .hero-text {
+    flex: 1 1 50%; /* Each takes up at least 50% of the flex container */
+    min-width: 300px; /* Minimum width to prevent too much shrinking */
+    padding: 1rem;
 }
 
 .hero-image {
     width: 100%;
-    max-width: 600px;
+    max-width: 600px; /* Limit maximum size to maintain design integrity */
     border-radius: 12px;
-    margin-left: 10%;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    align-self: center;  /* Ensures alignment is centered within its flex item */
 }
 
-/* Hero text section */
 .hero-text {
-    flex: 1;
-    padding: 0 2rem;
-}
-
-.hero-text h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.hero-text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #555;
+    padding: 0 2rem; /* Padding to ensure text doesn't touch the edges */
 }
 
 /* Footer styling */
@@ -117,7 +107,7 @@
     overflow: hidden;
 }
 
-/* Responsive adjustments for Hero section */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 1024px) {
     .hero-text h2 {
         font-size: 1.75rem;
@@ -131,7 +121,7 @@
 
 @media (max-width: 768px) {
     .hero-section {
-        flex-direction: column;
+        flex-direction: column; /* Stack them vertically on smaller screens */
         text-align: center;
         padding: 2rem 0;
     }
@@ -142,8 +132,8 @@
     }
 
     .hero-image {
-        max-width: 100%;
-        margin: 0;
+        max-width: 100%; /* Allow the image to adjust to the container width */
+        margin: 0 auto; /* Center the image horizontally */
     }
 
     .hero-text h2 {
